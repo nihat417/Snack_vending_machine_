@@ -14,7 +14,7 @@ namespace Snack_vending_machine_
 {
     public partial class Form2 : Form
     {
-        
+        public Action<float,bool> Paymentmoney { get; set; }
         public float totalmoney = 0.0f;
        
         public Form2()
@@ -27,6 +27,19 @@ namespace Snack_vending_machine_
 
             //totalmoney+=money
             //Howmuchmontextbox.Text = "sd";
+            Paymentmoney += (money,isAdd)=>
+            {
+                if(isAdd==true)
+                {
+                    totalmoney += money;
+                    Howmuchmontextbox.Text = totalmoney.ToString();                    
+                }
+                else
+                {
+                    totalmoney -= money;
+                    Howmuchmontextbox.Text = totalmoney.ToString();
+                }
+            };
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -34,12 +47,15 @@ namespace Snack_vending_machine_
             var products = Fakedata.products;
             for (int i = products.Count-1; i>=0 ; i--)
             {
-                Uc_Controls uc1 = new Uc_Controls(products[i]);
+                Uc_Controls uc1 = new Uc_Controls(products[i],Paymentmoney);
                 uc1.Dock = DockStyle.Top;
                 panel1.Controls.Add(uc1);
             }
         }
 
         
+
+
+
     }
 }

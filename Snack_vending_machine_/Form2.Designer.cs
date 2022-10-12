@@ -37,6 +37,10 @@
             this.dollar5btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dollar1btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1dollar = new System.Windows.Forms.Label();
+            this.label5dollar = new System.Windows.Forms.Label();
+            this.label10dolllar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -71,6 +75,10 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label10dolllar);
+            this.panel3.Controls.Add(this.label5dollar);
+            this.panel3.Controls.Add(this.label1dollar);
             this.panel3.Controls.Add(this.Howmuchmontextbox);
             this.panel3.Controls.Add(this.dollar10btn);
             this.panel3.Controls.Add(this.dollar5btn);
@@ -97,10 +105,11 @@
             this.Howmuchmontextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Howmuchmontextbox.ForeColor = System.Drawing.Color.Black;
             this.Howmuchmontextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Howmuchmontextbox.Location = new System.Drawing.Point(442, 42);
+            this.Howmuchmontextbox.Location = new System.Drawing.Point(441, 29);
             this.Howmuchmontextbox.Name = "Howmuchmontextbox";
             this.Howmuchmontextbox.PasswordChar = '\0';
             this.Howmuchmontextbox.PlaceholderText = "";
+            this.Howmuchmontextbox.ReadOnly = true;
             this.Howmuchmontextbox.SelectedText = "";
             this.Howmuchmontextbox.Size = new System.Drawing.Size(94, 38);
             this.Howmuchmontextbox.TabIndex = 4;
@@ -168,6 +177,46 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // label1dollar
+            // 
+            this.label1dollar.AutoSize = true;
+            this.label1dollar.BackColor = System.Drawing.Color.Transparent;
+            this.label1dollar.Location = new System.Drawing.Point(332, 245);
+            this.label1dollar.Name = "label1dollar";
+            this.label1dollar.Size = new System.Drawing.Size(13, 13);
+            this.label1dollar.TabIndex = 5;
+            this.label1dollar.Text = "1";
+            // 
+            // label5dollar
+            // 
+            this.label5dollar.AutoSize = true;
+            this.label5dollar.BackColor = System.Drawing.Color.Transparent;
+            this.label5dollar.Location = new System.Drawing.Point(429, 245);
+            this.label5dollar.Name = "label5dollar";
+            this.label5dollar.Size = new System.Drawing.Size(13, 13);
+            this.label5dollar.TabIndex = 6;
+            this.label5dollar.Text = "5";
+            // 
+            // label10dolllar
+            // 
+            this.label10dolllar.AutoSize = true;
+            this.label10dolllar.BackColor = System.Drawing.Color.Transparent;
+            this.label10dolllar.Location = new System.Drawing.Point(523, 245);
+            this.label10dolllar.Name = "label10dolllar";
+            this.label10dolllar.Size = new System.Drawing.Size(19, 13);
+            this.label10dolllar.TabIndex = 7;
+            this.label10dolllar.Text = "10";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(223, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 38);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "amount to be paid";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +231,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -198,5 +248,9 @@
         private Guna.UI2.WinForms.Guna2ImageButton dollar5btn;
         private Guna.UI2.WinForms.Guna2ImageButton dollar1btn;
         public Guna.UI2.WinForms.Guna2TextBox Howmuchmontextbox;
+        private System.Windows.Forms.Label label1dollar;
+        private System.Windows.Forms.Label label10dolllar;
+        private System.Windows.Forms.Label label5dollar;
+        private System.Windows.Forms.Label label1;
     }
 }

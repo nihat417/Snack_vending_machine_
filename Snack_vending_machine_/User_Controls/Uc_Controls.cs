@@ -13,9 +13,13 @@ namespace Snack_vending_machine_.User_Controls
 {
     public partial class Uc_Controls : UserControl
     {        
-        public float money = 0.0f;
+
+        public Action<float,bool> Paymentmoney { get; set; }
+        
+        
         public int countprod = 0;
-        public Uc_Controls(Product product)
+        public int? counts;
+        public Uc_Controls(Product product,Action<float,bool>paymentmoney)
         {
             InitializeComponent();
             label1.BackColor = ColorTranslator.FromHtml("#52D1DC");
@@ -26,29 +30,44 @@ namespace Snack_vending_machine_.User_Controls
                 productspicture.Load($"./../../Resources/{product.Photo}");
 
 
-            //Productnamelabel.Text = $"Name:"+ product.Name.ToString();
             Produccostlabel.Text =  product.Cost.ToString();
             Productcountlabel.Text =product.Count.ToString();
-            
-
+            counts = product.Count;
+            Paymentmoney = paymentmoney;
         }
 
         private void minusbutton_Click(object sender, EventArgs e)
         {
+            
+            float money = 0.0f;
+            bool isAdd = false;
 
+            int counstay = int.Parse(Productcountlabel.Text);
+
+            if (counstay<counts)
+            {
+                money += float.Parse(Produccostlabel.Text);
+                countprod = int.Parse(Productcountlabel.Text) + 1;
+                Productcountlabel.Text = countprod.ToString();
+                Paymentmoney(money,isAdd);
+            }
+            else
+                minusbutton.Enabled = true;
         }
 
         private void Addproductbutton_Click(object sender, EventArgs e)
         {
+
+            float money = 0.0f;
+            bool isAdd = true;
+
             if (Productcountlabel.Text != "0")
             {
                 money += float.Parse(Produccostlabel.Text);
                 countprod = int.Parse(Productcountlabel.Text)-1;
                 Productcountlabel.Text = countprod.ToString();
 
-                Form2 f = new Form2();
-                f.Howmuchmontextbox.Text = money.ToString();
-
+                Paymentmoney(money,isAdd);
             }
             else
                 Addproductbutton.Enabled = true;
