@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace Snack_vending_machine_.User_Controls
 {
     public partial class Uc_Controls : UserControl
-    {
+    {        
+        public float money = 0.0f;
+        public int countprod = 0;
         public Uc_Controls(Product product)
         {
             InitializeComponent();
@@ -25,9 +27,9 @@ namespace Snack_vending_machine_.User_Controls
 
 
             //Productnamelabel.Text = $"Name:"+ product.Name.ToString();
-            Produccostlabel.Text = $"Cost:" + product.Cost.ToString();
-            Productcountlabel.Text = $"Count:" + product.Count.ToString();
-
+            Produccostlabel.Text =  product.Cost.ToString();
+            Productcountlabel.Text =product.Count.ToString();
+            
 
         }
 
@@ -36,6 +38,20 @@ namespace Snack_vending_machine_.User_Controls
 
         }
 
-        
+        private void Addproductbutton_Click(object sender, EventArgs e)
+        {
+            if (Productcountlabel.Text != "0")
+            {
+                money += float.Parse(Produccostlabel.Text);
+                countprod = int.Parse(Productcountlabel.Text)-1;
+                Productcountlabel.Text = countprod.ToString();
+
+                Form2 f = new Form2();
+                f.Howmuchmontextbox.Text = money.ToString();
+
+            }
+            else
+                Addproductbutton.Enabled = true;
+        }
     }
 }

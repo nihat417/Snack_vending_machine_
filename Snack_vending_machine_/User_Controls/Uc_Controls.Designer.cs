@@ -32,12 +32,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.productspicture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.minusbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.Addproductbutton = new Guna.UI2.WinForms.Guna2Button();
             this.Productcountlabel = new System.Windows.Forms.Label();
             this.Produccostlabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.minusbutton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.productspicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,7 +80,7 @@
             // 
             this.groupBox1.Controls.Add(this.productspicture);
             this.groupBox1.Controls.Add(this.minusbutton);
-            this.groupBox1.Controls.Add(this.guna2Button1);
+            this.groupBox1.Controls.Add(this.Addproductbutton);
             this.groupBox1.Controls.Add(this.Productcountlabel);
             this.groupBox1.Controls.Add(this.Produccostlabel);
             this.groupBox1.Location = new System.Drawing.Point(16, 3);
@@ -89,21 +89,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // Productcountlabel
+            // productspicture
             // 
-            this.Productcountlabel.Location = new System.Drawing.Point(6, 57);
-            this.Productcountlabel.Name = "Productcountlabel";
-            this.Productcountlabel.Size = new System.Drawing.Size(70, 13);
-            this.Productcountlabel.TabIndex = 2;
-            this.Productcountlabel.Text = "Productcount";
-            // 
-            // Produccostlabel
-            // 
-            this.Produccostlabel.Location = new System.Drawing.Point(6, 44);
-            this.Produccostlabel.Name = "Produccostlabel";
-            this.Produccostlabel.Size = new System.Drawing.Size(65, 13);
-            this.Produccostlabel.TabIndex = 1;
-            this.Produccostlabel.Text = "ProductCost";
+            this.productspicture.BackColor = System.Drawing.Color.Transparent;
+            this.productspicture.ImageRotate = 0F;
+            this.productspicture.Location = new System.Drawing.Point(63, 31);
+            this.productspicture.Name = "productspicture";
+            this.productspicture.Size = new System.Drawing.Size(56, 39);
+            this.productspicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productspicture.TabIndex = 5;
+            this.productspicture.TabStop = false;
+            this.productspicture.UseTransparentBackground = true;
             // 
             // minusbutton
             // 
@@ -124,39 +120,44 @@
             this.minusbutton.Text = "guna2Button2";
             this.minusbutton.Click += new System.EventHandler(this.minusbutton_Click);
             // 
-            // guna2Button1
+            // Addproductbutton
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BackgroundImage = global::Snack_vending_machine_.Properties.Resources.plus;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(20, 91);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(22, 13);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Adproductbtn";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.Addproductbutton.Animated = true;
+            this.Addproductbutton.AutoRoundedCorners = true;
+            this.Addproductbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Addproductbutton.BackgroundImage = global::Snack_vending_machine_.Properties.Resources.plus;
+            this.Addproductbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Addproductbutton.BorderRadius = 5;
+            this.Addproductbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Addproductbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Addproductbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Addproductbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Addproductbutton.FillColor = System.Drawing.Color.Transparent;
+            this.Addproductbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Addproductbutton.ForeColor = System.Drawing.Color.White;
+            this.Addproductbutton.Location = new System.Drawing.Point(20, 91);
+            this.Addproductbutton.Name = "Addproductbutton";
+            this.Addproductbutton.Size = new System.Drawing.Size(22, 13);
+            this.Addproductbutton.TabIndex = 3;
+            this.Addproductbutton.Text = "Adproductbtn";
+            this.Addproductbutton.UseTransparentBackground = true;
+            this.Addproductbutton.Click += new System.EventHandler(this.Addproductbutton_Click);
             // 
-            // productspicture
+            // Productcountlabel
             // 
-            this.productspicture.BackColor = System.Drawing.Color.Transparent;
-            this.productspicture.ImageRotate = 0F;
-            this.productspicture.Location = new System.Drawing.Point(63, 31);
-            this.productspicture.Name = "productspicture";
-            this.productspicture.Size = new System.Drawing.Size(56, 39);
-            this.productspicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.productspicture.TabIndex = 5;
-            this.productspicture.TabStop = false;
-            this.productspicture.UseTransparentBackground = true;
+            this.Productcountlabel.Location = new System.Drawing.Point(6, 57);
+            this.Productcountlabel.Name = "Productcountlabel";
+            this.Productcountlabel.Size = new System.Drawing.Size(70, 13);
+            this.Productcountlabel.TabIndex = 2;
+            this.Productcountlabel.Text = "Productcount";
+            // 
+            // Produccostlabel
+            // 
+            this.Produccostlabel.Location = new System.Drawing.Point(6, 44);
+            this.Produccostlabel.Name = "Produccostlabel";
+            this.Produccostlabel.Size = new System.Drawing.Size(65, 13);
+            this.Produccostlabel.TabIndex = 1;
+            this.Produccostlabel.Text = "ProductCost";
             // 
             // Uc_Controls
             // 
@@ -165,7 +166,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "Uc_Controls";
-            this.Size = new System.Drawing.Size(162, 136);
+            this.Size = new System.Drawing.Size(162, 136);            
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -181,7 +182,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button minusbutton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button Addproductbutton;
         private System.Windows.Forms.Label Productcountlabel;
         private System.Windows.Forms.Label Produccostlabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

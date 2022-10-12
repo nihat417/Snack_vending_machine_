@@ -105,6 +105,7 @@
     <None Include="Resources\cola.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\dollar.png" />
     <Content Include="Resources\fanta.png" />
     <Content Include="Resources\sprite.png" />
   </ItemGroup>

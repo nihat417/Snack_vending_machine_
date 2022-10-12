@@ -14,10 +14,19 @@ namespace Snack_vending_machine_
 {
     public partial class Form2 : Form
     {
+        
+        public float totalmoney = 0.0f;
+       
         public Form2()
         {
             InitializeComponent();
             panel2.BackColor = ColorTranslator.FromHtml("#ED9B40");
+            panel3.BackColor = ColorTranslator.FromHtml("#B7ADCF");
+            Howmuchmontextbox.FillColor = ColorTranslator.FromHtml("#BEB4D3");
+
+
+            //totalmoney+=money
+            //Howmuchmontextbox.Text = "sd";
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -30,5 +39,7 @@ namespace Snack_vending_machine_
                 panel1.Controls.Add(uc1);
             }
         }
+
+        
     }
 }
