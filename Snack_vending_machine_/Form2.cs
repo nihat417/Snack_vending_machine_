@@ -48,16 +48,31 @@ namespace Snack_vending_machine_
         private void Form2_Load(object sender, EventArgs e)
         {
             var products = Fakedata.products;
+            //for (int i = products.Count - 1; i >= 0; i--)
+            //{
+            //    Uc_Controls uc1 = new Uc_Controls(products[i], Paymentmoney);
+            //    uc1.Dock = DockStyle.Top;
+            //    panel1.Controls.Add(uc1);
+            //};
             if (File.Exists("Productsss.json"))
             {
-                JsonConvert.DeserializeObject<Product>(File.ReadAllText("Productsss.json"));
-
+                JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText("Productsss.json"));
+            
                 for (int i = products.Count - 1; i >= 0; i--)
                 {
                     Uc_Controls uc1 = new Uc_Controls(products[i], Paymentmoney);
                     uc1.Dock = DockStyle.Top;
                     panel1.Controls.Add(uc1);
-                    File.WriteAllText($"Productsss.json", JsonConvert.SerializeObject(products));
+                    
+                }
+            }
+            else
+            {
+                for (int i = products.Count - 1; i >= 0; i--)
+                {
+                    Uc_Controls uc1 = new Uc_Controls(products[i], Paymentmoney);
+                    uc1.Dock = DockStyle.Top;
+                    panel1.Controls.Add(uc1);
                 }
             }
         }
@@ -66,7 +81,7 @@ namespace Snack_vending_machine_
         {
             if (Howmuchmontextbox.Text != "")
             {
-                if (totalmoney < 1)
+                if (totalmoney <= 1)
                 {
                     //totalmoney = 0;
                     remainingamounttextbox.Text = "0";
@@ -89,7 +104,7 @@ namespace Snack_vending_machine_
         {
             if (Howmuchmontextbox.Text != "")
             {
-                if (totalmoney < 5)
+                if (totalmoney <= 5)
                 {
                     //totalmoney = 0;
                     remainingamounttextbox.Text = "0";
@@ -112,7 +127,7 @@ namespace Snack_vending_machine_
         {
             if (Howmuchmontextbox.Text != "")
             {
-                if (totalmoney < 10)
+                if (totalmoney <= 10)
                 {
 
                     remainingamounttextbox.Text = "0";
@@ -129,7 +144,19 @@ namespace Snack_vending_machine_
                 dollar10btn.Enabled = true;
         }
 
-
-
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            if(remainingamounttextbox.Text=="0")
+            {
+                Howmuchmontextbox.Text = "";
+                remainingamounttextbox.Text = "";
+                retunedtextbox.Text = "";
+                File.WriteAllText($"Productsss.json", JsonConvert.SerializeObject(Fakedata.products));
+            }
+            else
+            {
+                MessageBox.Show("mebleg tam odenilmeyib!");
+            }
+        }
     }
 }

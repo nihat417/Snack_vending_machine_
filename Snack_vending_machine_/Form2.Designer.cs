@@ -32,6 +32,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.nameMachine = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.retunedtextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.remainingamounttextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,13 +42,10 @@
             this.label5dollar = new System.Windows.Forms.Label();
             this.label1dollar = new System.Windows.Forms.Label();
             this.Howmuchmontextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.retunedtextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.dollar10btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dollar5btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dollar1btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -99,6 +99,54 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(636, 361);
             this.panel3.TabIndex = 2;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = global::Snack_vending_machine_.Properties.Resources.palm_of_hand;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(541, 142);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 65);
+            this.guna2ImageButton1.TabIndex = 13;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(164, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(271, 25);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "amount to be returned";
+            // 
+            // retunedtextbox
+            // 
+            this.retunedtextbox.Animated = true;
+            this.retunedtextbox.BorderColor = System.Drawing.Color.Transparent;
+            this.retunedtextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.retunedtextbox.DefaultText = "";
+            this.retunedtextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.retunedtextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.retunedtextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.retunedtextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.retunedtextbox.FillColor = System.Drawing.Color.Transparent;
+            this.retunedtextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.retunedtextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.retunedtextbox.ForeColor = System.Drawing.Color.Black;
+            this.retunedtextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.retunedtextbox.Location = new System.Drawing.Point(441, 153);
+            this.retunedtextbox.Name = "retunedtextbox";
+            this.retunedtextbox.PasswordChar = '\0';
+            this.retunedtextbox.PlaceholderText = "";
+            this.retunedtextbox.ReadOnly = true;
+            this.retunedtextbox.SelectedText = "";
+            this.retunedtextbox.Size = new System.Drawing.Size(94, 25);
+            this.retunedtextbox.TabIndex = 11;
             // 
             // label2
             // 
@@ -198,40 +246,6 @@
             this.Howmuchmontextbox.Size = new System.Drawing.Size(94, 22);
             this.Howmuchmontextbox.TabIndex = 4;
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(164, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(271, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "amount to be returned";
-            // 
-            // retunedtextbox
-            // 
-            this.retunedtextbox.Animated = true;
-            this.retunedtextbox.BorderColor = System.Drawing.Color.Transparent;
-            this.retunedtextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.retunedtextbox.DefaultText = "";
-            this.retunedtextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.retunedtextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.retunedtextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.retunedtextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.retunedtextbox.FillColor = System.Drawing.Color.Transparent;
-            this.retunedtextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.retunedtextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.retunedtextbox.ForeColor = System.Drawing.Color.Black;
-            this.retunedtextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.retunedtextbox.Location = new System.Drawing.Point(441, 153);
-            this.retunedtextbox.Name = "retunedtextbox";
-            this.retunedtextbox.PasswordChar = '\0';
-            this.retunedtextbox.PlaceholderText = "";
-            this.retunedtextbox.ReadOnly = true;
-            this.retunedtextbox.SelectedText = "";
-            this.retunedtextbox.Size = new System.Drawing.Size(94, 25);
-            this.retunedtextbox.TabIndex = 11;
-            // 
             // dollar10btn
             // 
             this.dollar10btn.BackColor = System.Drawing.Color.Transparent;
@@ -297,19 +311,6 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::Snack_vending_machine_.Properties.Resources.palm_of_hand;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(541, 142);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 65);
-            this.guna2ImageButton1.TabIndex = 13;
             // 
             // Form2
             // 

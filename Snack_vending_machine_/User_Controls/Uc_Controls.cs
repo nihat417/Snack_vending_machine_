@@ -64,8 +64,8 @@ namespace Snack_vending_machine_.User_Controls
             if (Productcountlabel.Text != "0")
             {
                 money += float.Parse(Produccostlabel.Text);
-                countprod = int.Parse(Productcountlabel.Text)-1;
-                Productcountlabel.Text = countprod.ToString();
+                Productcountlabel.Text = (int.Parse(Productcountlabel.Text)-1).ToString();
+                //Productcountlabel.Text = countprod.ToString();
 
                 Paymentmoney(money,isAdd);
             }
