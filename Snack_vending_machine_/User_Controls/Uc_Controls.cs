@@ -1,4 +1,5 @@
-﻿using Snack_vending_machine_.Models;
+﻿using Snack_vending_machine_.Fakedatas;
+using Snack_vending_machine_.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,7 +66,8 @@ namespace Snack_vending_machine_.User_Controls
             {
                 money += float.Parse(Produccostlabel.Text);
                 Productcountlabel.Text = (int.Parse(Productcountlabel.Text)-1).ToString();
-                //Productcountlabel.Text = countprod.ToString();
+                counts -= 1;
+                Productcountlabel.Text = counts.ToString();
 
                 Paymentmoney(money,isAdd);
             }

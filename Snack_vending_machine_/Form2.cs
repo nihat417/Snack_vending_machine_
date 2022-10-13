@@ -35,7 +35,7 @@ namespace Snack_vending_machine_
                 if(isAdd==true)
                 {
                     totalmoney += money;
-                    Howmuchmontextbox.Text = totalmoney.ToString();                    
+                    Howmuchmontextbox.Text = totalmoney.ToString();
                 }
                 else
                 {
@@ -160,3 +160,4 @@ namespace Snack_vending_machine_
         }
     }
 }
+
